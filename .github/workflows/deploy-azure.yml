@@ -35,6 +35,7 @@ jobs:
           containerAppName: vibe-tetris
           containerAppEnvironment: vibe-tetris-env
           resourceGroup: Pipeline-tetris
+          location: swedencentral
           imageToDeploy: tetrisreg.azurecr.io/vibe-tetris:${{ github.sha }}
           acrName: tetrisreg
           acrUsername: ${{ secrets.ACR_USERNAME }}
