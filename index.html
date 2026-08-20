@@ -301,10 +301,17 @@
         }
       }
 
+      function randomBackgroundColor() {
+        const hue = Math.floor(Math.random() * 360);
+        document.documentElement.style.setProperty('--bg-1', `hsl(${hue}, 45%, 14%)`);
+        document.documentElement.style.setProperty('--bg-2', `hsl(${hue}, 45%, 8%)`);
+      }
+
       function lockPiece() {
         mergePiece();
         clearLines();
         spawnNextPiece();
+        randomBackgroundColor();
       }
 
       function movePiece(dx, dy) {
